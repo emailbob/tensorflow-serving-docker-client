@@ -2,7 +2,7 @@
 # Tensorflow serving Node.js client
 
 ## Description
-Simple nodejs client to send images to a Tensorflow serving server
+Simple Node.js client to send images to a TensorFlow Serving server
 
 ### Docker Build
 
@@ -15,13 +15,13 @@ docker build -t tensorflow-serving-docker-client .
 Example for using a local image called turtle.jpg that is in your current path
 
 ```bash
-docker run -ti -v $(pwd):/image tensorflow-serving-docker-client --host=<tensorflow servering host> --port=9000 --image=/image/turtle.jpg
+docker run -ti -v $(pwd):/image thefoo/tensorflow-serving-docker-client --host=<tensorflow servering host> --port=9000 --image=/image/turtle.jpg
 ```
 
 Example for downloading a remote image from a url and deleting it afterward
 
 ```bash
-docker run -ti tensorflow-serving-docker-client --host=<tensorflow servering host> --image=https://upload.wikimedia.org/wikipedia/commons/7/74/A-Cat.jpg -d
+docker run -ti thefoo/tensorflow-serving-docker-client --host=<tensorflow servering host> --image=https://upload.wikimedia.org/wikipedia/commons/7/74/A-Cat.jpg -d
 ```
 
 ### Run from source
